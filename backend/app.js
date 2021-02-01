@@ -13,11 +13,9 @@ app.use(morgan("dev"));
 import productsRouter from "./routes/productRouter.js";
 app.use("/api/v1/products", productsRouter);
 
-app.use("/", (req, res) => {
-  res.status(200).json({
-    success: true,
-    data: "server running~😂",
-  });
-});
+import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+
+app.use(notFound);
+app.use(errorHandler);
 
 export default app;
