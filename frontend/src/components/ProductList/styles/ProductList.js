@@ -3,7 +3,6 @@ import styled from "styled-components/macro";
 export const Container = styled.div`
   width: 80%;
   max-width: 1100px;
-  border: 1px solid pink;
   height: 35%;
   margin: 2rem auto;
   display: flex;
@@ -18,10 +17,9 @@ export const Title = styled.h2`
 
 export const Frame = styled.div`
   width: 100%;
-  border: 1px solid black;
   height: 100%;
   display: grid;
-  grid-auto-rows: 100%;
+  grid-auto-rows: 300px;
   grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   grid-gap: 0.5rem;
 `;

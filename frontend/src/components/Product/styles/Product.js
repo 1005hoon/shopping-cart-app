@@ -1,9 +1,9 @@
 import styled from "styled-components/macro";
 
 export const Container = styled.div`
-  border: 1px solid #dcdcdc;
   display: flex;
   flex-direction: column;
+  height: 300px;
 `;
 
 export const ImageContainer = styled.div`

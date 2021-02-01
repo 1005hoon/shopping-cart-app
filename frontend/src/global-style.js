@@ -9,7 +9,7 @@ export const GlobalStyles = createGlobalStyle`
 
   #root {
     width: 100%;
-    height: 100vh;
     margin: 5rem 0;
+    box-sizing: border-box;
   }
 `;
