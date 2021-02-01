@@ -9,17 +9,9 @@ connectDB();
 
 const importData = async () => {
   try {
-    await Order.deleteMany();
     await Product.deleteMany();
-    await User.deleteMany();
 
-    const createdUsers = await User.insertMany(users);
-    const adminUser = createdUsers[0]._id;
-    const sampleProducts = products.map((product) => ({
-      ...product,
-      user: adminUser,
-    }));
-    await Product.insertMany(sampleProducts);
+    await Product.insertMany(products);
 
     console.log("data imported");
     process.exit();
@@ -31,10 +23,7 @@ const importData = async () => {
 
 const destroyData = async () => {
   try {
-    await Order.deleteMany();
     await Product.deleteMany();
-    await User.deleteMany();
-
     console.log("data destroyed");
     process.exit();
   } catch (error) {
