@@ -1,11 +1,32 @@
 import React from "react";
+import {
+  Container,
+  ImageContainer,
+  ShoppingCart,
+  Name,
+  Price,
+} from "./styles/Product";
+import { formatCurrency, formatName } from "../../utils/textFormatter";
 
-const Product = () => {
+export default function Product({ children, ...restProps }) {
+  return <Container {...restProps}>{children}</Container>;
+}
+
+Product.ImageContainer = function ProductImageContainer({
+  children,
+  ...restProps
+}) {
   return (
-    <>
-      <p>this is product</p>
-    </>
+    <ImageContainer {...restProps}>
+      <ShoppingCart />
+    </ImageContainer>
   );
 };
 
-export default Product;
+Product.Name = function ProductName({ children, ...restProps }) {
+  return <Name {...restProps}>{formatName(children)}</Name>;
+};
+
+Product.Price = function ProductPrice({ children, ...restProps }) {
+  return <Price {...restProps}>{formatCurrency(children)} 원</Price>;
+};
