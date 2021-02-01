@@ -10,6 +10,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(morgan("dev"));
 
+import productsRouter from "./routes/productRouter.js";
+app.use("/api/v1/products", productsRouter);
+
 app.use("/", (req, res) => {
   res.status(200).json({
     success: true,
