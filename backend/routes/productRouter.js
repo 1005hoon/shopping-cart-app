@@ -1,13 +1,12 @@
 import express from "express";
-import asyncHandler from "express-async-handler";
+import {
+  fetchAllProducts,
+  fetchProduct,
+} from "../controller/productController.js";
 
 const router = express.Router();
 
-router.get("/", async (req, res, next) => {
-  res.status(200).json({
-    success: true,
-    data: "products api connected",
-  });
-});
+router.get("/", fetchAllProducts);
+router.get("/:id", fetchProduct);
 
 export default router;
