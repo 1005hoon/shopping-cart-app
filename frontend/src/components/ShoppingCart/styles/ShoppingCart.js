@@ -4,11 +4,9 @@ export const Container = styled.div`
   width: 80%;
   max-width: 1100px;
   margin: 2rem auto;
-
-  /* display: grid;
+  display: grid;
   grid-template-columns: 75% 22.5%;
-  grid-gap: 1.6rem; */
-  height: 100px;
+  grid-gap: 1.6rem;
 `;
 
 export const CartContainer = styled.div`
@@ -27,4 +25,50 @@ export const CartList = styled.div`
 
 export const SummaryContainer = styled.div`
   width: 100%;
+`;
+
+export const CartHeader = styled.div`
+  border: 1px solid black;
+  height: 60px;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 600;
+`;
+
+export const ImageSection = styled.div`
+  height: 100%;
+  display: flex;
+  flex-grow: 2;
+`;
+
+export const NameSection = styled.div`
+  height: 100%;
+  display: flex;
+  flex-grow: 4;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const QuantitySection = styled.div`
+  height: 100%;
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const PriceSection = styled.div`
+  height: 100%;
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const RemoveSection = styled.div`
+  height: 100%;
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
 `;

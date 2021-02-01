@@ -5,6 +5,12 @@ import {
   SummaryContainer,
   Title,
   CartList,
+  CartHeader,
+  ImageSection,
+  NameSection,
+  QuantitySection,
+  PriceSection,
+  RemoveSection,
 } from "./styles/ShoppingCart";
 
 export default function ShoppingCart({ children }) {
@@ -27,6 +33,21 @@ ShoppingCart.CartList = function ShoppingCartCartList({
   ...restProps
 }) {
   return <CartList>{children}</CartList>;
+};
+
+ShoppingCart.CartHeader = function ShoppingCartCartHeader({
+  children,
+  ...restProps
+}) {
+  return (
+    <CartHeader>
+      <ImageSection />
+      <NameSection>상품정보</NameSection>
+      <QuantitySection>수량</QuantitySection>
+      <PriceSection>가격</PriceSection>
+      <RemoveSection />
+    </CartHeader>
+  );
 };
 
 ShoppingCart.SummaryContainer = function ShoppingCartSummaryContainer({
