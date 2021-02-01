@@ -1,0 +1,30 @@
+{
+  "name": "fe-project",
+  "version": "1.0.0",
+  "description": "Frontend programming project for Help-Me's FE dev recruitment",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server": "nodemon backend/server",
+    "client": "yarn --cwd frontend start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d"
+  },
+  "keywords": [
+    "shopping",
+    "cart",
+    "for",
+    "frontend",
+    "project"
+  ],
+  "author": "hoon",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.11.14"
+  }
+}
