@@ -20,14 +20,20 @@ export const ShoppingCart = styled.button`
   position: absolute;
   bottom: 5%;
   right: 7%;
-  padding: 18px;
+  padding: 16px;
   border-radius: 50%;
   border: none;
-  background: url("../assets/btn_shopping_bag.png") center center/ 70% no-repeat,
+  /* 왜이렇게 blurry 한거죠 .. */
+  background: url("../assets/btn_shopping_bag.png") center center/ 67% no-repeat,
     #696969;
 
   &:hover {
     cursor: pointer;
+  }
+
+  &:focus {
+    border: none;
+    outline: 0;
   }
 `;
 

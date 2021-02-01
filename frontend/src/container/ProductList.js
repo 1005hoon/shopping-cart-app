@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+
 import ProductList from "../components/ProductList";
 import Product from "../components/Product";
 import productsData from "../products";
+import Spinner from "../components/Spinner";
 
 export default function ProductListContainer() {
   const [products, setProducts] = useState([...productsData]);
@@ -12,6 +14,7 @@ export default function ProductListContainer() {
       <ProductList.Frame>
         {products.map(({ name, price, image }) => (
           <Product key={name}>
+            {/* <Spinner /> */}
             <Product.ImageContainer src={image} />
             <Product.Name>{name}</Product.Name>
             <Product.Price>{price}</Product.Price>
