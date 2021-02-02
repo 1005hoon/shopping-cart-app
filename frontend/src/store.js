@@ -3,11 +3,11 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import { productListReducer } from "./reducers/productReducer";
-
+import { cartReducer } from "./reducers/cartReducer";
 // reducer
 const reducer = combineReducers({
   productList: productListReducer,
-  // cart: () => "cart reducer here",
+  cart: cartReducer,
 });
 
 // local storage

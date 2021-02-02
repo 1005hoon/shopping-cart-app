@@ -1,5 +1,10 @@
 import axios from "axios";
-import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstant";
+import {
+  CART_ADD_ITEM,
+  CART_REMOVE_ITEM,
+  INCREMENT_ITEM,
+  DECREMENT_ITEM,
+} from "../constants/cartConstant";
 
 export const addToCart = (id, quantity = 1) => async (dispatch, getState) => {
   const { data } = await axios.get(`/api/v1/products/${id}`);
@@ -13,8 +18,7 @@ export const addToCart = (id, quantity = 1) => async (dispatch, getState) => {
       quantity,
     },
   });
-  console.log(data);
-  // localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
 };
 
 export const removeFromCart = (id) => async (dispatch, getState) => {
@@ -22,5 +26,19 @@ export const removeFromCart = (id) => async (dispatch, getState) => {
     type: CART_REMOVE_ITEM,
     payload: id,
   });
-  // localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+  localStorage.setItem("cartItems", JSON.stringify(getState().cart.cartItems));
+};
+
+export const increment = (id) => {
+  return {
+    type: INCREMENT_ITEM,
+    payload: id,
+  };
+};
+
+export const decrement = (id) => {
+  return {
+    type: DECREMENT_ITEM,
+    payload: id,
+  };
 };
