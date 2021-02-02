@@ -7,7 +7,7 @@ export default function ShoppingCartContainer() {
       <ShoppingCart.CartContainer>
         <ShoppingCart.Title>장바구니</ShoppingCart.Title>
         <ShoppingCart.CartList>
-          <ShoppingCart.CartHeader></ShoppingCart.CartHeader>
+          <ShoppingCart.CartHeader />
         </ShoppingCart.CartList>
       </ShoppingCart.CartContainer>
       <ShoppingCart.SummaryContainer>

@@ -28,8 +28,8 @@ export const SummaryContainer = styled.div`
 `;
 
 export const CartHeader = styled.div`
-  border: 1px solid black;
-  height: 60px;
+  border-bottom: 1px solid #9a9a9a;
+  height: 50px;
   display: flex;
   font-size: 0.8rem;
   font-weight: 600;
@@ -71,4 +71,12 @@ export const RemoveSection = styled.div`
   flex-grow: 1;
   align-items: center;
   justify-content: center;
+`;
+
+export const CartBody = styled.div`
+  border-bottom: 1px solid #9a9a9a;
+  height: 50px;
+  display: flex;
+  font-size: 0.8rem;
+  font-weight: 600;
 `;

@@ -50,6 +50,21 @@ ShoppingCart.CartHeader = function ShoppingCartCartHeader({
   );
 };
 
+ShoppingCart.CartBody = function ShoppingCartCartBody({
+  children,
+  ...restProps
+}) {
+  return (
+    <CartBody>
+      <ImageSection />
+      <NameSection>상품정보</NameSection>
+      <QuantitySection>수량</QuantitySection>
+      <PriceSection>가격</PriceSection>
+      <RemoveSection />
+    </CartBody>
+  );
+};
+
 ShoppingCart.SummaryContainer = function ShoppingCartSummaryContainer({
   children,
   ...restProps

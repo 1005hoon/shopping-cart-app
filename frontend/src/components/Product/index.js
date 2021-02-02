@@ -1,4 +1,5 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 import {
   Container,
   ImageContainer,
@@ -14,11 +15,13 @@ export default function Product({ children, ...restProps }) {
 
 Product.ImageContainer = function ProductImageContainer({
   children,
+  id,
   ...restProps
 }) {
+  const addToCartHandler = (id) => {};
   return (
     <ImageContainer {...restProps}>
-      <ShoppingCart />
+      <ShoppingCart onClick={addToCartHandler} />
     </ImageContainer>
   );
 };

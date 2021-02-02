@@ -25,9 +25,9 @@ export default function ProductListContainer() {
         ) : error ? (
           <div>{error}</div>
         ) : (
-          products.map(({ name, price, image }) => (
+          products.map(({ name, price, image, _id }) => (
             <Product key={name}>
-              <Product.ImageContainer src={image} />
+              <Product.ImageContainer src={image} id={_id} />
               <Product.Name>{name}</Product.Name>
               <Product.Price>{price}</Product.Price>
             </Product>
