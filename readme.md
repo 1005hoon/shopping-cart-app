@@ -3,7 +3,7 @@
 ## How to Run?
 
 1. 클론 후에 root directory에서 `npm install` 한 뒤, frontend 폴더에서 `npm install`을 한번 해주세요
-2. 서버 데이터베이스에 데이터 이관을 위해 `npm run data:import` 를 실행해주세요
+2. 서버 데이터베이스에 데이터 이관을 위해 루트 디렉토리에서 `npm run data:import` 를 실행해주세요
 3. 서버와 프론트를 동시에 실행시키기 위해 `npm run dev`를 입력해주세요
 
 ## 구조
