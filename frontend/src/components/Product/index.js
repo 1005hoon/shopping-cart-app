@@ -8,7 +8,7 @@ import {
   Price,
 } from "./styles/Product";
 import { formatCurrency, formatName } from "../../utils/textFormatter";
-
+import { addToCart } from "../../actions/cartAction";
 export default function Product({ children, ...restProps }) {
   return <Container {...restProps}>{children}</Container>;
 }
@@ -18,7 +18,13 @@ Product.ImageContainer = function ProductImageContainer({
   id,
   ...restProps
 }) {
-  const addToCartHandler = (id) => {};
+  const dispatch = useDispatch();
+  const { _id } = useSelector((state) =>
+    state.productList.products.find((product) => product._id === id)
+  );
+  const addToCartHandler = () => {
+    dispatch(addToCart(_id));
+  };
   return (
     <ImageContainer {...restProps}>
       <ShoppingCart onClick={addToCartHandler} />
