@@ -2,11 +2,11 @@ import styled from "styled-components/macro";
 
 export const Container = styled.div`
   display: grid;
+  margin: 2rem auto;
+  width: 80%;
 
   @media only screen and (min-width: 360px) {
-    width: 80%;
     max-width: 1100px;
-    margin: 2rem auto;
     display: grid;
     grid-template-columns: 75% 22.5%;
     grid-gap: 1.6rem;
@@ -35,7 +35,6 @@ export const CartHeader = styled.div`
   display: none;
 
   @media only screen and (min-width: 360px) {
-    border: 1px solid pink;
     border-bottom: 1px solid #e0e0e0;
     height: 50px;
     display: flex;

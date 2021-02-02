@@ -43,6 +43,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         (cartItem) => cartItem.product === action.payload
       );
       addedItem.quantity += 1;
+      localStorage.setItem("cartItems", JSON.stringify([...state.cartItems]));
       return {
         ...state,
         cartItems: [...state.cartItems],
@@ -52,6 +53,7 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
         (cartItem) => cartItem.product === action.payload
       );
       subtractedItem.quantity -= 1;
+      localStorage.setItem("cartItems", JSON.stringify([...state.cartItems]));
       return {
         ...state,
         cartItems: [...state.cartItems],

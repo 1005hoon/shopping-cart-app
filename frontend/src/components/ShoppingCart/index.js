@@ -20,12 +20,7 @@ import {
   QuantityContainer,
   BtnWrapper,
 } from "./styles/ShoppingCart";
-import {
-  addToCart,
-  removeFromCart,
-  increment,
-  decrement,
-} from "../../actions/cartAction";
+import { removeFromCart, increment, decrement } from "../../actions/cartAction";
 import { formatCurrency, formatName } from "../../utils/textFormatter";
 
 export default function ShoppingCart({ children }) {
@@ -43,17 +38,11 @@ ShoppingCart.Title = function ShoppingCartTitle({ children, ...restProps }) {
   return <Title>{children}</Title>;
 };
 
-ShoppingCart.CartList = function ShoppingCartCartList({
-  children,
-  ...restProps
-}) {
+ShoppingCart.CartList = function ShoppingCartCartList({ children }) {
   return <CartList>{children}</CartList>;
 };
 
-ShoppingCart.CartHeader = function ShoppingCartCartHeader({
-  children,
-  ...restProps
-}) {
+ShoppingCart.CartHeader = function ShoppingCartCartHeader() {
   return (
     <CartHeader>
       <ImageSection />
