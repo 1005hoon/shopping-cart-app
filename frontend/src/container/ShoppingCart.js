@@ -56,7 +56,7 @@ export default function ShoppingCartContainer() {
           <CartSummary.ListGroup>
             <CartSummary.SummaryTotal text="예상 결제 금액" cost={finalCost} />
           </CartSummary.ListGroup>
-          <CartSummary.CheckoutButton count={cartItems.length}>
+          <CartSummary.CheckoutButton cost={finalCost} count={cartItems.length}>
             전체상품 주문하기
           </CartSummary.CheckoutButton>
         </CartSummary>

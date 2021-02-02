@@ -38,7 +38,15 @@ CartSummary.SummaryTotal = function CartSummarySummaryTotal({ text, cost }) {
 
 CartSummary.CheckoutButton = function CartSummaryCheckoutButton({
   count,
+  cost,
   children,
 }) {
-  return <CheckoutButton disabled={count <= 0}>{children}</CheckoutButton>;
+  return (
+    <CheckoutButton
+      disabled={count <= 0}
+      onClick={() => alert(`헬프미님, ${cost}원 이 결제 완료되었습니다`)}
+    >
+      {children}
+    </CheckoutButton>
+  );
 };
