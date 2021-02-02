@@ -54,7 +54,7 @@ export const SummaryTotal = styled.div`
 `;
 
 export const CheckoutButton = styled.button`
-  @keyframes spinner {
+  /* @keyframes spinner {
     from {
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       transform: rotateX(0) rotateY(-360deg);
@@ -64,7 +64,7 @@ export const CheckoutButton = styled.button`
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       transform: rotateX(360deg) rotateY(-360deg);
     }
-  }
+  } */
   display: block;
   width: 100%;
   padding: 15px;
@@ -76,7 +76,7 @@ export const CheckoutButton = styled.button`
   outline: 0;
   transition: all 0.1s ease-in-out;
 
-  &:before {
+  /* &:before {
     content: attr(data-content-default);
   }
 
@@ -88,7 +88,7 @@ export const CheckoutButton = styled.button`
     &:before {
       content: attr(data-content-spinning);
     }
-  }
+  } */
 
   &:hover {
     cursor: pointer;
@@ -97,5 +97,6 @@ export const CheckoutButton = styled.button`
   &:active {
     border: none;
     outline: 0;
+    background: crimson;
   }
 `;

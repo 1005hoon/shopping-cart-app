@@ -36,6 +36,9 @@ CartSummary.SummaryTotal = function CartSummarySummaryTotal({ text, cost }) {
   );
 };
 
-CartSummary.CheckoutButton = function CartSummaryCheckoutButton({ children }) {
-  return <CheckoutButton>{children}</CheckoutButton>;
+CartSummary.CheckoutButton = function CartSummaryCheckoutButton({
+  count,
+  children,
+}) {
+  return <CheckoutButton disabled={count <= 0}>{children}</CheckoutButton>;
 };
